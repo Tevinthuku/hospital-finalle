@@ -1,0 +1,35 @@
+<template name="home">
+  <!-- the hollow blue if current user is logged in-->
+  {{#if currentUser}}
+    <div class="light-blue" style="width:100%; height: 200px"></div>
+    
+    {{else}}
+    <!--button to go and login-->
+<div class="light-blue" style="width:100%; height: 200px">
+  <a class="waves-effect waves-light btn-large light-blue" style="margin:auto; position: relative; left:0; right:0; top:50px"><i class="material-icons">account_circle</i>Login</a>
+</div>
+  {{/if}}
+  
+  {{#if currentUser}}
+  
+      <div class="row tabs-wrapper light-blue" id="bookmarktabs">
+                <div class="col s12 light-blue">
+                  <ul class="tabs light-blue">
+                    <li class="tab col s3 waves-effect waves-light"><a href="#test1" class="white-text">Test 1</a></li>
+                    <li class="tab col s3 waves-effect waves-light"><a href="#test2" class="white-text active">Test 2</a></li>
+                    <li class="tab col s3 waves-effect waves-light"><a href="#test3" class="white-text">Disabled Tab</a></li>
+                    <li class="tab col s3 waves-effect waves-light"><a href="#test4" class="white-text">Test 4</a></li>
+                  </ul>
+                </div>
+      </div>
+      <!-- the very different views-->
+                <div id="test1" class="col s12">Test 1</div>
+                <div id="test2" class="col s12">
+                    <div style="height:1000px"></div>
+                </div>
+                <div id="test3" class="col s12">Test 3</div>
+                <div id="test4" class="col s12">Test 4</div>
+                
+                
+  {{/if}}
+</template>
